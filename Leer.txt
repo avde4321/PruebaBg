@@ -1,0 +1,5 @@
+Una ves inciado el Front 
+
+importar libreria en para react JS
+
+npm i boostrap reactstrap axios

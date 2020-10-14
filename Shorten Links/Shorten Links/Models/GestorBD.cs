@@ -12,6 +12,8 @@ namespace Shorten_Links.Models
         public int CiRegistros { get; set; }
         public string UrlOriginal { get; set; }
         public string UrlShortern { get; set; }
+        public string TokenUrl { get; set; }
+        public int ContIngreso { get; set; }
         public string FechaIngreso { get; set; }
         public string Estado { get; set; }
     }

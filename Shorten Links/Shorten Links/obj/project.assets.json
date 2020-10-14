@@ -5746,19 +5746,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\avde4\\.nuget\\packages\\": {}
+    "C:\\Users\\VIAMATICA\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\avde4\\Desktop\\Proyectos_Bancos\\Shorten Links\\Shorten Links\\Shorten Links.csproj",
+      "projectUniqueName": "C:\\Users\\VIAMATICA\\Desktop\\PruebaBg-main\\Shorten Links\\Shorten Links\\Shorten Links.csproj",
       "projectName": "Shorten Links",
-      "projectPath": "C:\\Users\\avde4\\Desktop\\Proyectos_Bancos\\Shorten Links\\Shorten Links\\Shorten Links.csproj",
-      "packagesPath": "C:\\Users\\avde4\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\avde4\\Desktop\\Proyectos_Bancos\\Shorten Links\\Shorten Links\\obj\\",
+      "projectPath": "C:\\Users\\VIAMATICA\\Desktop\\PruebaBg-main\\Shorten Links\\Shorten Links\\Shorten Links.csproj",
+      "packagesPath": "C:\\Users\\VIAMATICA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\VIAMATICA\\Desktop\\PruebaBg-main\\Shorten Links\\Shorten Links\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\avde4\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\VIAMATICA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

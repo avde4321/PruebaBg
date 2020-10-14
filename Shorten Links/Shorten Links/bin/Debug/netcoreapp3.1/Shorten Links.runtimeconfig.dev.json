@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\avde4\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\avde4\\.nuget\\packages"
+      "C:\\Users\\VIAMATICA\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\VIAMATICA\\.nuget\\packages"
     ]
   }
 }

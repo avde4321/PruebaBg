@@ -19,6 +19,7 @@ namespace Shorten_Links.Controllers
     public class CutLinksController : ControllerBase
     {
 
+        LogicaNegocios.LogicaCutLink lcl = new LogicaNegocios.LogicaCutLink();
         private readonly DBContext context;
         public CutLinksController(DBContext context)
         {
@@ -42,17 +43,23 @@ namespace Shorten_Links.Controllers
 
         // GET api/<CutLinksController>/5
         [HttpGet("{id}", Name ="GetRegistro")]
-        public ActionResult Get(int id)
+        public RedirectResult Get(string id)
         {
+            dynamic registro = null;
             try
             {
-                var registro = context.Registros.FirstOrDefault(r=>r.CiRegistros == id);
-                return Ok(registro);
+                registro = context.Registros.FirstOrDefault(r=>r.TokenUrl == id);
+                if (id.Equals(registro.TokenUrl))
+                {
+                    context.Entry(lcl.ContadorIngreso(registro)).State = EntityState.Modified;
+                    context.SaveChanges();
+                }
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                Utilitarios.Util ut = new Utilitarios.Util();
             }
+            return Redirect(registro.UrlOriginal);
         }
 
         // POST api/<CutLinksController>
@@ -61,7 +68,6 @@ namespace Shorten_Links.Controllers
         {
             try
             {
-                LogicaNegocios.LogicaCutLink lcl = new LogicaNegocios.LogicaCutLink();
                 context.Registros.Add(lcl.CutLink(gestor));
                 context.SaveChanges();
                 return Ok(gestor);
@@ -74,20 +80,20 @@ namespace Shorten_Links.Controllers
 
         // PUT api/<CutLinksController>/5
         [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody]GestorBD gestor)
+        public ActionResult Put(string id, [FromBody]GestorBD gestor)
         {
             try
             {
-                if (id.Equals(gestor.CiRegistros))
+                if (id.Equals(gestor.TokenUrl))
                 {
                     context.Entry(gestor).State = EntityState.Modified;
                     context.SaveChanges();
-                    return CreatedAtRoute("GetRegistro", new { id = gestor.CiRegistros }, gestor);
+                    return CreatedAtRoute("GetRegistro", new { id = gestor.TokenUrl }, gestor);
                 }
-                else
-                {
+                else{
                     return BadRequest();
                 }
+                
             }
             catch (Exception ex)
             {

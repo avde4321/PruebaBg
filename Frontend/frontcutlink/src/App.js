@@ -42,7 +42,7 @@ function App() {
   return (
     <div className="App">
       <br></br>
-      <h1 className ="swal2-title">Proyecto Shorter link</h1>
+      <h1 className ="swal2-title">Proyecto Shorten link</h1>
       <br></br>
       <div className="card card-success">
         <div className="card-body">
@@ -70,7 +70,7 @@ function App() {
           <thead>
             <tr>
               <th>UrlOriginal</th>
-              <th>UrlShortern</th>
+              <th>UrlShorten</th>
             </tr>
           </thead>
           <tbody>
